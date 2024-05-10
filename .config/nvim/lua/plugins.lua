@@ -22,4 +22,7 @@ plugins = require('plugins_git').setup(plugins)
 -- which_key.nvim
 plugins = require("plugins_which_key").setup(plugins)
 
+-- nvim-autopairs.nvim
+plugins = require("plugins_nvim-autopairs").setup(plugins)
+
 require("lazy").setup(plugins, opts)
