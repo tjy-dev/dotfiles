@@ -25,4 +25,7 @@ plugins = require("plugins_which_key").setup(plugins)
 -- nvim-autopairs.nvim
 plugins = require("plugins_nvim-autopairs").setup(plugins)
 
+-- catpuccin
+plugins = require("plugins_colorscheme").setup(plugins)
+
 require("lazy").setup(plugins, opts)
