@@ -19,4 +19,7 @@ local plugins = {}
 -- git
 plugins = require('plugins_git').setup(plugins)
 
+-- which_key.nvim
+plugins = require("plugins_which_key").setup(plugins)
+
 require("lazy").setup(plugins, opts)
