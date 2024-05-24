@@ -46,6 +46,7 @@ local plugins = {
       keyset("n", "gi", "<Plug>(coc-implementation)", {silent = true})
       keyset("n", "gr", "<Plug>(coc-references)", {silent = true})
     end,
+
     event = "InsertEnter",
   },
 }
@@ -54,17 +55,18 @@ local plugins = {
 -- plugins = require("hoge").setup(plugins)
 
 -- git
-plugins = require('plugins_git').setup(plugins)
+require('plugins_git').setup(plugins)
 
 -- which_key.nvim
-plugins = require("plugins_which_key").setup(plugins)
+require("plugins_which_key").setup(plugins)
 
 -- nvim-autopairs.nvim
-plugins = require("plugins_nvim-autopairs").setup(plugins)
+require("plugins_nvim-autopairs").setup(plugins)
 
 -- catpuccin
-plugins = require("plugins_colorscheme").setup(plugins)
+require("plugins_colorscheme").setup(plugins)
 
+-- setup lazy
 require("lazy").setup(plugins, opts)
 
 -- keymaps after plugin setup (collision)
