@@ -11,7 +11,6 @@ nvim_autopairs.setup = function(plugins)
     -- this is equalent to setup({}) function
   })
 
-  return plugins
 end
 
 return nvim_autopairs

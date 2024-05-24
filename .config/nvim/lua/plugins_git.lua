@@ -12,7 +12,7 @@ git.setup = function(plugins)
 	  event = { "CursorHold", "CursorHoldI" },
   })
 
-  return plugins
+  -- return plugins
 end
 
 return git

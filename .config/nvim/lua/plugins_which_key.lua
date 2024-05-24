@@ -18,7 +18,6 @@ which_key.setup = function(plugins)
     }
   })
 
-  return plugins
 end
 
 return which_key
