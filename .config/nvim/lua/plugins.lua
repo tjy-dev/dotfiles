@@ -13,6 +13,22 @@ vim.opt.rtp:prepend(lazypath)
 
 local plugins = {}
 
+-- Define plugins
+local plugins = {
+  {
+    "neoclide/coc.nvim",
+    branch = "release",
+    build = "yarn install --frozen-lockfile",
+    config = function()
+      -- Minimal coc.nvim configuration
+      vim.opt.backup = false
+      vim.opt.writebackup = false
+      vim.opt.updatetime = 300
+      vim.opt.signcolumn = "yes"
+    end,
+  },
+}
+
 -- Ex.
 -- plugins = require("hoge").setup(plugins)
 
@@ -29,3 +45,6 @@ plugins = require("plugins_nvim-autopairs").setup(plugins)
 plugins = require("plugins_colorscheme").setup(plugins)
 
 require("lazy").setup(plugins, opts)
+
+-- keymaps after plugin setup (collision)
+require("keymaps")
